@@ -1,0 +1,156 @@
+<section id="users-content" class="p-4 sm:p-6 lg:p-8">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-6 sm:mb-8">
+    Manage Pengguna
+  </h2>
+
+  <div
+    class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4"
+  >
+    <div class="relative w-full sm:w-1/2 lg:w-1/3">
+      <input
+        type="text"
+        placeholder="Cari pengguna berdasarkan NISN atau Nama..."
+        class="p-3 pl-10 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <i
+        class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+      ></i>
+    </div>    
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6">
+    <div class="overflow-x-auto relative">
+      <table class="min-w-full bg-white border-collapse">
+        <thead>
+          <tr
+            class="bg-gray-100 text-left text-gray-600 uppercase text-xs sm:text-sm leading-normal border-b border-gray-200"
+          >
+            <th class="py-3 px-4 sm:px-6 text-center">No.</th>
+            <th class="py-3 px-4 sm:px-6 text-left">NISN</th>
+            <th class="py-3 px-4 sm:px-6 text-left">Nama</th>
+            <th class="py-3 px-4 sm:px-6 text-left">Status</th>
+            <th class="py-3 px-4 sm:px-6 text-center">Aksi</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700 text-sm font-light">
+          <tr class="border-b border-gray-200 hover:bg-gray-50">
+            <td class="py-3 px-4 sm:px-6 text-center">1</td>
+            <td class="py-3 px-4 sm:px-6 text-left">0012345678</td>
+            <td class="py-3 px-4 sm:px-6 text-left whitespace-nowrap">
+              Akbar tod
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-left">
+              <span
+                class="bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-semibold"
+                >Aktif</span
+              >
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <button
+                  title="Edit Pengguna"
+                  class="text-blue-500 hover:text-blue-700 transition duration-200 p-1 rounded hover:bg-blue-100"
+                >
+                  <i class="fas fa-edit text-lg"></i>
+                </button>
+                <button
+                  title="Hapus Pengguna"
+                  class="text-red-500 hover:text-red-700 transition duration-200 p-1 rounded hover:bg-red-100"
+                >
+                  <i class="fas fa-trash-alt text-lg"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-50">
+            <td class="py-3 px-4 sm:px-6 text-center">2</td>
+            <td class="py-3 px-4 sm:px-6 text-left">0023456789</td>
+            <td class="py-3 px-4 sm:px-6 text-left whitespace-nowrap">
+              Go young jun
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-left">
+              <span
+                class="bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-semibold"
+                >Aktif</span
+              >
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <button
+                  title="Edit Pengguna"
+                  class="text-blue-500 hover:text-blue-700 transition duration-200 p-1 rounded hover:bg-blue-100"
+                >
+                  <i class="fas fa-edit text-lg"></i>
+                </button>
+                <button
+                  title="Hapus Pengguna"
+                  class="text-red-500 hover:text-red-700 transition duration-200 p-1 rounded hover:bg-red-100"
+                >
+                  <i class="fas fa-trash-alt text-lg"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-50">
+            <td class="py-3 px-4 sm:px-6 text-center">3</td>
+            <td class="py-3 px-4 sm:px-6 text-left">0034567890</td>
+            <td class="py-3 px-4 sm:px-6 text-left whitespace-nowrap">
+              Messi
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-left">
+              <span
+                class="whitespace-nowrap bg-red-100 text-red-700 py-1 px-3 rounded-full text-xs font-semibold"
+                >Tidak Aktif</span
+              >
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <button
+                  title="Edit Pengguna"
+                  class="text-blue-500 hover:text-blue-700 transition duration-200 p-1 rounded hover:bg-blue-100"
+                >
+                  <i class="fas fa-edit text-lg"></i>
+                </button>
+                <button
+                  title="Hapus Pengguna"
+                  class="text-red-500 hover:text-red-700 transition duration-200 p-1 rounded hover:bg-red-100"
+                >
+                  <i class="fas fa-trash-alt text-lg"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-50">
+            <td class="py-3 px-4 sm:px-6 text-center">4</td>
+            <td class="py-3 px-4 sm:px-6 text-left">0045678901</td>
+            <td class="py-3 px-4 sm:px-6 text-left whitespace-nowrap">
+              Alex
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-left">
+              <span
+                class="bg-orange-100 text-orange-700 py-1 px-3 rounded-full text-xs font-semibold"
+                >Tertunda</span
+              >
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <button
+                  title="Edit Pengguna"
+                  class="text-blue-500 hover:text-blue-700 transition duration-200 p-1 rounded hover:bg-blue-100"
+                >
+                  <i class="fas fa-edit text-lg"></i>
+                </button>
+                <button
+                  title="Hapus Pengguna"
+                  class="text-red-500 hover:text-red-700 transition duration-200 p-1 rounded hover:bg-red-100"
+                >
+                  <i class="fas fa-trash-alt text-lg"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</section>

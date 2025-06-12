@@ -1,0 +1,130 @@
+<section id="results-content" class="p-4 sm:p-6 lg:p-8">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-6 sm:mb-8">
+    Manage Hasil Voting
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+      <h3
+        class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200"
+      >
+        <i class="fas fa-info-circle text-gray-500 mr-2"></i> Ringkasan Hasil
+      </h3>
+      <ul class="space-y-3">
+        <li class="flex justify-between items-center text-gray-700 text-base">
+          <span>Total Suara Masuk:</span>
+          <span class="font-bold text-lg text-blue-700">850</span>
+        </li>
+        <li class="flex justify-between items-center text-gray-700 text-base">
+          <span>Jumlah Pemilih Terdaftar:</span>
+          <span class="font-bold text-lg text-green-700">1200</span>
+        </li>
+        <li class="flex justify-between items-center text-gray-700 text-base">
+          <span>Partisipasi Voting:</span>
+          <span class="font-bold text-lg text-purple-700">70.83%</span>
+        </li>
+      </ul>
+      <p class="text-sm text-gray-500 mt-4">
+        *Data diperbarui terakhir pada: 10 Juni 2025, 22:55 WIB
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+      <h3
+        class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200"
+      >
+        <i class="fas fa-chart-bar text-gray-500 mr-2"></i> Perolehan Suara
+      </h3>
+      <div class="h-64 md:h-80 lg:h-96 w-full mx-auto mb-4">
+        <canvas id="votingChart"></canvas>
+      </div>
+      <button
+        class="mt-4 bg-purple-600 text-white px-5 py-2 rounded-lg hover:bg-purple-700 transition duration-300 flex items-center text-sm sm:text-base w-full justify-center sm:w-auto"
+      >
+        <i class="fas fa-download mr-2"></i> Export Hasil Lengkap
+      </button>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+    <h3
+      class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200"
+    >
+      <i class="fas fa-list-ol text-gray-500 mr-2"></i> Rincian Perolehan Suara Calon Ketua
+    </h3>
+    <div class="overflow-x-auto relative">
+      <table class="min-w-full bg-white border-collapse">
+        <thead>
+          <tr
+            class="bg-gray-100 text-left text-gray-600 uppercase text-xs sm:text-sm leading-normal border-b border-gray-200"
+          >
+            <th class="py-3 px-4 sm:px-6 text-center">Peringkat</th>
+            <th class="py-3 px-4 sm:px-6 text-left">Nama Calon</th>
+            <th class="py-3 px-4 sm:px-6 text-left">Jumlah Suara</th>
+            <th class="py-3 px-4 sm:px-6 text-left">% Suara</th>
+            <th class="py-3 px-4 sm:px-6 text-center">Status</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700 text-sm font-light">
+          <tr class="border-b border-gray-200 hover:bg-gray-50">
+            <td class="py-3 px-4 sm:px-6 text-center">
+              <span
+                class="bg-yellow-400 text-yellow-900 py-1 px-3 rounded-full text-xs font-bold"
+                >1</span
+              >
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-left whitespace-nowrap font-medium">
+              Alfin Tsabit
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-left">450</td>
+            <td class="py-3 px-4 sm:px-6 text-left">52.94%</td>
+            <td class="py-3 px-4 sm:px-6 text-center">
+              <span
+                class="bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-semibold"
+                >Terpilih</span
+              >
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-50">
+            <td class="py-3 px-4 sm:px-6 text-center">
+              <span
+                class="bg-gray-300 text-gray-800 py-1 px-3 rounded-full text-xs font-bold"
+                >2</span
+              >
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-left whitespace-nowrap font-medium">
+              Siti Rahayu
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-left">300</td>
+            <td class="py-3 px-4 sm:px-6 text-left">35.29%</td>
+            <td class="py-3 px-4 sm:px-6 text-center">
+              <span
+                class="bg-blue-100 text-blue-700 py-1 px-3 rounded-full text-xs font-semibold"
+                >Tidak Terpilih</span
+              >
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-50">
+            <td class="py-3 px-4 sm:px-6 text-center">
+              <span
+                class="bg-orange-300 text-orange-900 py-1 px-3 rounded-full text-xs font-bold"
+                >3</span
+              >
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-left whitespace-nowrap font-medium">
+              Agus Kurniawan
+            </td>
+            <td class="py-3 px-4 sm:px-6 text-left">100</td>
+            <td class="py-3 px-4 sm:px-6 text-left">11.76%</td>
+            <td class="py-3 px-4 sm:px-6 text-center">
+              <span
+                class="whitespace-nowrap bg-blue-100 text-blue-700 py-1 px-3 rounded-full text-xs font-semibold"
+                >Tidak Terpilih</span
+              >
+            </td>
+          </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</section>
