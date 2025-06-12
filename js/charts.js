@@ -60,12 +60,12 @@ function initializeParticipationChart() {
         datasets: [{
           data: [sudahVoting, belumVoting],
           backgroundColor: [
-            "rgba(16, 185, 129, 0.7)", // Green
-            "rgba(229, 231, 235, 0.7)", // Gray
+            "rgba(15, 173, 121, 0.7)",
+            "#ef4444", 
           ],
           borderColor: [
-            "rgba(16, 185, 129, 1)",
-            "rgba(229, 231, 235, 1)",
+            "rgba(15, 173, 121, 0.7)",
+            "#ef4444",
           ],
           borderWidth: 1,
         }]

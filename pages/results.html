@@ -3,128 +3,101 @@
     Manage Hasil Voting
   </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-    <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+  <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
+    <div class="bg-lime-400 neo-brutal-border p-6 sm:p-8">
       <h3
-        class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200"
+        class="text-2xl font-black text-black mb-4 pb-2 border-b-4 border-black"
       >
-        <i class="fas fa-info-circle text-gray-500 mr-2"></i> Ringkasan Hasil
+        <i class="fas fa-info-circle text-black mr-2"></i> Ringkasan Hasil
       </h3>
-      <ul class="space-y-3">
-        <li class="flex justify-between items-center text-gray-700 text-base">
-          <span>Total Suara Masuk:</span>
-          <span class="font-bold text-lg text-blue-700">850</span>
+      <ul class="space-y-4">
+        <li class="flex justify-between items-center bg-white p-4 neo-brutal-border">
+          <span class="font-bold text-black">Total Suara Masuk:</span>
+          <span class="font-black text-2xl text-black">850</span>
         </li>
-        <li class="flex justify-between items-center text-gray-700 text-base">
-          <span>Jumlah Pemilih Terdaftar:</span>
-          <span class="font-bold text-lg text-green-700">1200</span>
+        <li class="flex justify-between items-center bg-white p-4 neo-brutal-border">
+          <span class="font-bold text-black">Jumlah Pemilih:</span>
+          <span class="font-black text-2xl text-black">1200</span>
         </li>
-        <li class="flex justify-between items-center text-gray-700 text-base">
-          <span>Partisipasi Voting:</span>
-          <span class="font-bold text-lg text-purple-700">70.83%</span>
+        <li class="flex justify-between items-center bg-white p-4 neo-brutal-border">
+          <span class="font-bold text-black">Partisipasi Voting:</span>
+          <span class="font-black text-2xl text-black">70.83%</span>
         </li>
       </ul>
-      <p class="text-sm text-gray-500 mt-4">
+      <p class="text-sm font-bold text-black mt-4 bg-white p-2 neo-brutal-border">
         *Data diperbarui terakhir pada: 10 Juni 2025, 22:55 WIB
       </p>
     </div>
 
-    <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-      <h3
-        class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200"
-      >
-        <i class="fas fa-chart-bar text-gray-500 mr-2"></i> Perolehan Suara
+    <div class="bg-yellow-400 neo-brutal-border p-6 sm:p-8">
+      <h3 class="text-2xl font-black text-black mb-4 pb-2 border-b-4 border-black">
+        <i class="fas fa-chart-bar text-black mr-2"></i> Grafik Hasil Voting
       </h3>
-      <div class="h-64 md:h-80 lg:h-96 w-full mx-auto mb-4">
+      <div class="bg-white h-64 md:h-80 lg:h-96 w-full mx-auto mb-4 p-4 neo-brutal-border">
         <canvas id="votingChart"></canvas>
       </div>
-      <button
-        class="mt-4 bg-purple-600 text-white px-5 py-2 rounded-lg hover:bg-purple-700 transition duration-300 flex items-center text-sm sm:text-base w-full justify-center sm:w-auto"
-      >
-        <i class="fas fa-download mr-2"></i> Export Hasil Lengkap
+      <button class="mt-4 bg-white text-black px-5 py-3 neo-brutal-button font-bold text-lg hover:bg-[#FFE600] transition-colors duration-200 flex items-center justify-center w-full">
+        <i class="fas fa-download mr-2"></i> EXPORT HASIL LENGKAP
       </button>
     </div>
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-    <h3
-      class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200"
-    >
-      <i class="fas fa-list-ol text-gray-500 mr-2"></i> Rincian Perolehan Suara Calon Ketua
+  <div class="bg-blue-400 neo-brutal-border bg-blue-500 p-6 sm:p-8">
+    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 pb-2 border-b-4 border-white">
+      <i class="fas fa-list-ol text-white mr-2"></i> Rincian Perolehan Suara Calon Ketua
     </h3>
     <div class="overflow-x-auto relative">
-      <table class="min-w-full bg-white border-collapse">
-        <thead>
-          <tr
-            class="bg-gray-100 text-left text-gray-600 uppercase text-xs sm:text-sm leading-normal border-b border-gray-200"
-          >
-            <th class="py-3 px-4 sm:px-6 text-center">Peringkat</th>
-            <th class="py-3 px-4 sm:px-6 text-left">Nama Calon</th>
-            <th class="py-3 px-4 sm:px-6 text-left">Jumlah Suara</th>
-            <th class="py-3 px-4 sm:px-6 text-left">% Suara</th>
-            <th class="py-3 px-4 sm:px-6 text-center">Status</th>
+      <table class="min-w-full bg-white neo-brutal-border">
+        <thead class="bg-yellow-400">
+          <tr class="bg-[#FFE600] text-black font-black text-lg border-b-4 border-black">
+            <th class="py-4 px-6 text-center border-b-4 border-black">No.</th>
+            <th class="py-4 px-6 text-left border-b-4 border-black">Nama Calon</th>
+            <th class="py-4 px-6 text-center border-b-4 border-black">Total Suara</th>
+            <th class="py-4 px-6 text-center border-b-4 border-black">Persentase</th>
           </tr>
         </thead>
-        <tbody class="text-gray-700 text-sm font-light">
-          <tr class="border-b border-gray-200 hover:bg-gray-50">
-            <td class="py-3 px-4 sm:px-6 text-center">
-              <span
-                class="bg-yellow-400 text-yellow-900 py-1 px-3 rounded-full text-xs font-bold"
-                >1</span
-              >
-            </td>
-            <td class="py-3 px-4 sm:px-6 text-left whitespace-nowrap font-medium">
-              Alfin Tsabit
-            </td>
-            <td class="py-3 px-4 sm:px-6 text-left">450</td>
-            <td class="py-3 px-4 sm:px-6 text-left">52.94%</td>
-            <td class="py-3 px-4 sm:px-6 text-center">
-              <span
-                class="bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-semibold"
-                >Terpilih</span
-              >
-            </td>
+        <tbody class="text-black text-base font-bold">
+          <tr class="border-b-4 border-black hover:bg-[#E8E8E8]">
+            <td class="py-3 px-4 sm:px-6 text-center border-b-4 border-black">1</td>
+            <td class="py-3 px-4 sm:px-6 text-left border-b-4 border-black">Alfin Tsabit</td>
+            <td class="py-3 px-4 sm:px-6 text-center border-b-4 border-black">450</td>
+            <td class="py-3 px-4 sm:px-6 text-center border-b-4 border-black">52.94%</td>
           </tr>
-          <tr class="border-b border-gray-200 hover:bg-gray-50">
-            <td class="py-3 px-4 sm:px-6 text-center">
-              <span
-                class="bg-gray-300 text-gray-800 py-1 px-3 rounded-full text-xs font-bold"
-                >2</span
-              >
-            </td>
-            <td class="py-3 px-4 sm:px-6 text-left whitespace-nowrap font-medium">
-              Siti Rahayu
-            </td>
-            <td class="py-3 px-4 sm:px-6 text-left">300</td>
-            <td class="py-3 px-4 sm:px-6 text-left">35.29%</td>
-            <td class="py-3 px-4 sm:px-6 text-center">
-              <span
-                class="bg-blue-100 text-blue-700 py-1 px-3 rounded-full text-xs font-semibold"
-                >Tidak Terpilih</span
-              >
-            </td>
+          <tr class="border-b-4 border-black hover:bg-[#E8E8E8]">
+            <td class="py-3 px-4 sm:px-6 text-center border-b-4 border-black">2</td>
+            <td class="py-3 px-4 sm:px-6 text-left border-b-4 border-black">Siti Rahayu</td>
+            <td class="py-3 px-4 sm:px-6 text-center border-b-4 border-black">300</td>
+            <td class="py-3 px-4 sm:px-6 text-center border-b-4 border-black">35.29%</td>
           </tr>
-          <tr class="border-b border-gray-200 hover:bg-gray-50">
-            <td class="py-3 px-4 sm:px-6 text-center">
-              <span
-                class="bg-orange-300 text-orange-900 py-1 px-3 rounded-full text-xs font-bold"
-                >3</span
-              >
-            </td>
-            <td class="py-3 px-4 sm:px-6 text-left whitespace-nowrap font-medium">
-              Agus Kurniawan
-            </td>
-            <td class="py-3 px-4 sm:px-6 text-left">100</td>
-            <td class="py-3 px-4 sm:px-6 text-left">11.76%</td>
-            <td class="py-3 px-4 sm:px-6 text-center">
-              <span
-                class="whitespace-nowrap bg-blue-100 text-blue-700 py-1 px-3 rounded-full text-xs font-semibold"
-                >Tidak Terpilih</span
-              >
-            </td>
+          <tr class="border-b-4 border-black hover:bg-[#E8E8E8]">
+            <td class="py-3 px-4 sm:px-6 text-center border-b-4 border-black">3</td>
+            <td class="py-3 px-4 sm:px-6 text-left border-b-4 border-black">Agus Kurniawan</td>
+            <td class="py-3 px-4 sm:px-6 text-center border-b-4 border-black">100</td>
+            <td class="py-3 px-4 sm:px-6 text-center border-b-4 border-black">11.77%</td>
           </tr>
-          </tbody>
+        </tbody>
       </table>
+    </div>
+  </div>
+
+  <div class="mt-8 bg-white neo-brutal-border p-6 sm:p-8">
+    <h3 class="text-2xl font-black text-black mb-4 pb-2 border-b-4 border-black">
+      <i class="fas fa-chart-pie text-black mr-2"></i> Grafik Partisipasi Voting
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white h-64 md:h-80 lg:h-96 w-full mx-auto p-4 neo-brutal-border">
+        <canvas id="participationChart"></canvas>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-green-500 p-4 neo-brutal-border">
+          <p class="font-bold text-white mb-1">Sudah Memilih</p>
+          <p class="text-3xl font-black text-white">850 Suara</p>
+        </div>
+        <div class="bg-red-500 p-4 neo-brutal-border">
+          <p class="font-bold text-white mb-1">Belum Memilih</p>
+          <p class="text-3xl font-black text-white">350 Suara</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,59 +1,61 @@
 <section id="dashboard-content" class="p-4 sm:p-6 lg:p-8">
-  <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-6 sm:mb-8">
+  <h2 class="text-3xl sm:text-4xl font-black text-black mb-6 sm:mb-8">
     Dashboard
   </h2>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-    <div
-      class="bg-white rounded-xl shadow-lg p-6 sm:p-8 flex items-center justify-between transition-all duration-300 hover:shadow-xl"
-    >
+    <div class="bg-blue-400 neo-brutal-border p-6 sm:p-8 flex items-center justify-between">
       <div>
-        <p class="text-gray-600 text-base sm:text-lg mb-1">Total Pemilih</p>
-        <p class="text-4xl sm:text-5xl font-bold text-blue-700">1.2K</p>
+        <p class="text-black font-bold text-xl mb-2 text-white">Total Pemilih</p>
+        <p class="text-4xl sm:text-5xl font-black text-white">1.2K</p>
       </div>
-      <i class="fas fa-users text-blue-500 text-5xl sm:text-6xl opacity-75"></i>
+      <i class="fas fa-users text-black text-5xl sm:text-6xl text-white"></i>
     </div>
 
-    <div
-      class="bg-white rounded-xl shadow-lg p-6 sm:p-8 flex items-center justify-between transition-all duration-300 hover:shadow-xl"
-    >
+    <div class="bg-green-500 neo-brutal-border p-6 sm:p-8 flex items-center justify-between">
       <div>
-        <p class="text-gray-600 text-base sm:text-lg mb-1">Calon Ketua</p>
-        <p class="text-4xl sm:text-5xl font-bold text-green-700">3</p>
+        <p class="text-black font-bold text-xl mb-2 text-white">Calon Ketua</p>
+        <p class="text-4xl sm:text-5xl font-black text-white">3</p>
       </div>
-      <i
-        class="fas fa-user-tie text-green-500 text-5xl sm:text-6xl opacity-75"
-      ></i>
+      <i class="fas fa-user-tie text-black text-5xl sm:text-6xl text-white"></i>
     </div>
 
-    <div
-      class="bg-white rounded-xl shadow-lg p-6 sm:p-8 flex items-center justify-between transition-all duration-300 hover:shadow-xl"
-    >
+    <div class="bg-yellow-400 neo-brutal-border p-6 sm:p-8 flex items-center justify-between">
       <div>
-        <p class="text-gray-600 text-base sm:text-lg mb-1">Suara Masuk</p>
-        <p class="text-4xl sm:text-5xl font-bold text-yellow-700">850</p>
+        <p class="text-black font-bold text-xl mb-2 text-white">Suara Masuk</p>
+        <p class="text-4xl sm:text-5xl font-black text-white">850</p>
       </div>
-      <i
-        class="fas fa-vote-yea text-yellow-500 text-5xl sm:text-6xl opacity-75"
-      ></i>
+      <i class="fas fa-vote-yea text-black text-5xl sm:text-6xl text-white"></i>
     </div>
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">
-      <i class="fas fa-chart-bar text-gray-500 mr-2"></i> Grafik Hasil Voting
+  <div class="bg-white neo-brutal-border p-6 sm:p-8">
+    <h3 class="text-2xl font-black text-black mb-6 pb-2 border-b-2 border-black">
+      <i class="fas fa-chart-bar text-black mr-2"></i> Grafik Hasil Voting
     </h3>
-    <div class="h-64 md:h-80 lg:h-96 w-full mx-auto mb-4">
+    <div class="h-64 md:h-80 lg:h-96 w-full mx-auto mb-4 p-4 bg-[#f0f0f0] neo-brutal-border">
       <canvas id="votingChart"></canvas>
     </div>   
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8 mt-8">
-    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">
-      <i class="fas fa-chart-pie text-gray-500 mr-2"></i> Grafik Partisipasi Voting
+   <div class="mt-8 bg-white neo-brutal-border p-6 sm:p-8">
+    <h3 class="text-2xl font-black text-black mb-4 pb-2 border-b-4 border-black">
+      <i class="fas fa-chart-pie text-black mr-2"></i> Grafik Partisipasi Voting
     </h3>
-    <div class="h-64 md:h-80 lg:h-96 w-full mx-auto mb-4">
-      <canvas id="participationChart"></canvas>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white h-64 md:h-80 lg:h-96 w-full mx-auto p-4 neo-brutal-border">
+        <canvas id="participationChart"></canvas>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-green-500 p-4 neo-brutal-border">
+          <p class="font-bold text-white mb-1">Sudah Memilih</p>
+          <p class="text-3xl font-black text-white">850 Suara</p>
+        </div>
+        <div class="bg-red-500 p-4 neo-brutal-border">
+          <p class="font-bold text-white mb-1">Belum Memilih</p>
+          <p class="text-3xl font-black text-white">350 Suara</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
