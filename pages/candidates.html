@@ -16,9 +16,13 @@
         class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-800"
       ></i>
     </div>
-    <button class="bg-white hover:bg-yellow-400 text-black px-5 py-3 neo-brutal-button font-bold text-lg">
-      <i class="fas fa-user-plus mr-2"></i> TAMBAH CALON
-    </button>
+    <button 
+    onclick="openAddCandidateModal()" 
+    class="fixed sm:static bottom-6 right-6 sm:bottom-auto sm:right-auto bg-blue-400 hover:bg-blue-500 text-white cursor-pointer p-4 sm:px-5 sm:py-3 neo-brutal-button font-bold text-lg z-40 sm:z-auto rounded-none flex items-center justify-center sm:w-auto"
+  >
+    <i class="fas fa-user-plus sm:mr-2"></i>
+    <span class="hidden sm:inline">TAMBAH CALON</span>
+  </button>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -52,14 +56,16 @@
       </div>
       <div class="flex space-x-3 mt-auto">
         <button
+          onclick="openEditCandidateModal('candidate-1')"
           title="Edit Calon"
-          class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
+          class="bg-blue-400 hover:bg-blue-500 cursor-pointer text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
         >
-          <i class="fas fa-edit mr-2 text-white"></i> EDIT
+          <i class="fas fa-edit mr-2"></i> EDIT
         </button>
         <button
+          onclick="openDeleteCandidateModal('candidate-1')"
           title="Hapus Calon"
-          class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
+          class="bg-red-600 hover:bg-red-700 cursor-pointer text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
         >
           <i class="fas fa-trash-alt mr-2"></i> HAPUS
         </button>
@@ -96,14 +102,16 @@
       </div>
       <div class="flex space-x-3 mt-auto">
         <button
+          onclick="openEditCandidateModal('candidate-2')"
           title="Edit Calon"
-          class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
+          class="bg-blue-400 hover:bg-blue-500 cursor-pointer text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
         >
-          <i class="fas fa-edit mr-2 text-white"></i> EDIT
+          <i class="fas fa-edit mr-2"></i> EDIT
         </button>
         <button
+          onclick="openDeleteCandidateModal('candidate-2')"
           title="Hapus Calon"
-          class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
+          class="bg-red-600 hover:bg-red-700 cursor-pointer text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
         >
           <i class="fas fa-trash-alt mr-2"></i> HAPUS
         </button>
@@ -140,18 +148,163 @@
       </div>
       <div class="flex space-x-3 mt-auto">
         <button
+          onclick="openEditCandidateModal('candidate-3')"
           title="Edit Calon"
-          class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
+          class="bg-blue-400 hover:bg-blue-500 cursor-pointer text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
         >
-          <i class="fas fa-edit mr-2 text-white"></i> EDIT
+          <i class="fas fa-edit mr-2"></i> EDIT
         </button>
         <button
+          onclick="openDeleteCandidateModal('candidate-3')"
           title="Hapus Calon"
-          class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
+          class="bg-red-600 hover:bg-red-700 cursor-pointer text-white px-4 py-2 neo-brutal-button font-bold text-sm flex items-center"
         >
           <i class="fas fa-trash-alt mr-2"></i> HAPUS
         </button>
       </div>
     </div>
   </div>
+
+  <!-- Edit Modal -->
+  <div id="editCandidateModal" class="fixed inset-0 bg-[rgba(0,0,0,0.8)] z-50 hidden overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white neo-brutal-border p-6 sm:p-8 w-full max-w-2xl my-8">
+        <div class="flex justify-between items-center border-b-4 border-black pb-4 mb-6">
+          <h3 class="text-2xl font-black text-black">Edit Calon Ketua</h3>          
+          <button onclick="closeEditCandidateModal()" class="text-2xl font-black hover:bg-red-600 hover:text-white cursor-pointer p-2 ">×</button>
+        </div>
+        
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-black font-bold mb-2">Nomor Urut</label>
+              <input type="text" class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600]" />
+            </div>
+            <div>
+              <label class="block text-black font-bold mb-2">Nama Lengkap</label>
+              <input type="text" class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600]" />
+            </div>
+            <div>
+              <label class="block text-black font-bold mb-2">Foto</label>
+              <input type="file" class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600]" />
+            </div>
+            <div>
+              <label class="block text-black font-bold mb-2">Visi</label>
+              <textarea class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600] h-24"></textarea>
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-black font-bold mb-2">Misi</label>
+              <textarea class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600] h-32"></textarea>
+            </div>
+          </div>
+          
+          <div class="flex space-x-4 mt-6">
+            <button type="submit" class="bg-blue-400 hover:bg-blue-500 cursor-pointer text-white px-6 py-3 neo-brutal-button font-bold flex-1">
+              SIMPAN
+            </button>
+            <button type="button" onclick="closeEditCandidateModal()" class="bg-red-500 hover:bg-red-600 cursor-pointer text-white px-6 py-3 neo-brutal-button font-bold flex-1">
+              BATAL
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Modal -->
+  <div id="deleteCandidateModal" class="fixed inset-0 bg-[rgba(0,0,0,0.8)] z-50 hidden overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white neo-brutal-border p-6 sm:p-8 w-full max-w-md my-8">
+        <div class="flex justify-between items-center border-b-4 border-black pb-4 mb-6">
+          <h3 class="text-2xl font-black text-black">Hapus Calon Ketua</h3>          
+        </div>
+        <p class="text-black font-bold mb-6">Apakah Anda yakin ingin menghapus calon ketua ini?</p>
+        <div class="flex space-x-4">
+          <button onclick="deleteCandidate()" class="bg-red-600 hover:bg-red-700 cursor-pointer text-white px-6 py-3 neo-brutal-button font-bold flex-1">
+            HAPUS
+          </button>
+          <button onclick="closeDeleteCandidateModal()" class="bg-gray-300 hover:bg-gray-400 cursor-pointer text-black hover:text-white px-6 py-3 neo-brutal-button font-bold flex-1">
+            BATAL
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Modal -->
+  <div id="addCandidateModal" class="fixed inset-0 bg-[rgba(0,0,0,0.8)] z-50 hidden overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white neo-brutal-border p-6 sm:p-8 w-full max-w-2xl my-8">
+        <div class="flex justify-between items-center border-b-4 border-black pb-4 mb-6">
+          <h3 class="text-2xl font-black text-black">Tambah Calon Ketua</h3>
+          <button onclick="closeAddCandidateModal()" class="text-2xl font-black hover:bg-red-600 hover:text-white cursor-pointer p-2">×</button>
+        </div>
+        
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-black font-bold mb-2">Nomor Urut</label>
+              <input 
+                type="number" 
+                class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600]" 
+                placeholder="#01"
+                required
+              />
+            </div>
+            <div>
+              <label class="block text-black font-bold mb-2">Nama Lengkap</label>
+              <input 
+                type="text" 
+                class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600]" 
+                placeholder="Masukkan nama lengkap"
+                required
+              />
+            </div>
+            <div>
+              <label class="block text-black font-bold mb-2">Foto</label>
+              <div class="flex items-center space-x-2">
+                <input 
+                  type="file" 
+                  accept="image/*"
+                  class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600]" 
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label class="block text-black font-bold mb-2">Visi</label>
+              <textarea 
+                class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600] h-24"
+                placeholder="Tuliskan visi calon ketua"
+                required
+              ></textarea>
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-black font-bold mb-2">Misi</label>
+              <textarea 
+                class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600] h-32"
+                placeholder="Tuliskan misi calon ketua (gunakan baris baru untuk setiap poin)"
+                required
+              ></textarea>
+            </div>
+          </div>
+          
+          <div class="flex space-x-4 mt-6">
+            <button type="submit" class="bg-blue-400 hover:bg-blue-500 cursor-pointer text-white px-6 py-3 neo-brutal-button font-bold flex-1">
+              SIMPAN
+            </button>
+            <button 
+              type="button" 
+              onclick="closeAddCandidateModal()" 
+              class="bg-red-500 hover:bg-red-600 cursor-pointer text-white px-6 py-3 neo-brutal-button font-bold flex-1">
+              BATAL
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add this button at the bottom of the section, before the modals -->
+  
 </section>

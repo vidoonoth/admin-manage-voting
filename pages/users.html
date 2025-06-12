@@ -16,13 +16,20 @@
         class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-800"
       ></i>
     </div>
+    <button 
+      onclick="openAddUserModal()" 
+      class="fixed sm:static bottom-6 right-6 sm:bottom-auto sm:right-auto bg-yellow-300 hover:bg-yellow-400 cursor-pointer text-black p-4 sm:px-5 sm:py-3 neo-brutal-button font-bold text-lg z-40 sm:z-auto rounded-none flex items-center justify-center sm:w-auto"
+    >
+      <i class="fas fa-user-plus sm:mr-2"></i>
+      <span class="hidden sm:inline">TAMBAH PENGGUNA</span>
+    </button>
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 neo-brutal-border">
+  <div class="bg-white shadow-lg p-4 sm:p-6 neo-brutal-border">
     <div class="overflow-x-auto relative">
       <table class="min-w-full bg-white neo-brutal-border">
         <thead>
-          <tr class="bg-[#FFE600] text-black font-black text-lg border-b-4 border-black">
+          <tr class="bg-yellow-300 text-black font-black text-lg border-b-4 border-black">
             <th class="py-4 px-6 text-center">No.</th>
             <th class="py-4 px-6 text-left">NISN</th>
             <th class="py-4 px-6 text-left">Nama</th>
@@ -39,23 +46,25 @@
             </td>
             <td class="py-3 px-4 sm:px-6 text-left">
               <span
-                class="bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-semibold"
+                class="bg-green-500 text-white py-1 px-3 text-xs font-black neo-brutal-border whitespace-nowrap"
                 >Aktif</span
               >
             </td>
             <td class="py-3 px-4 sm:px-6 text-center">
               <div class="flex items-center justify-center space-x-2">
                 <button
+                  onclick="openEditModal('0012345678')"
                   title="Edit Pengguna"
-                  class="text-blue-500 hover:text-blue-700 transition duration-200 p-1 rounded hover:bg-blue-100"
+                  class="bg-blue-400 hover:bg-blue-600 cursor-pointer text-black p-2 neo-brutal-button"
                 >
-                  <i class="fas fa-edit text-lg"></i>
+                  <i class="fas fa-edit text-lg text-white"></i>
                 </button>
                 <button
+                  onclick="openDeleteModal('0012345678')"
                   title="Hapus Pengguna"
-                  class="text-red-500 hover:text-red-700 transition duration-200 p-1 rounded hover:bg-red-100"
+                  class="bg-red-600 hover:bg-red-700 cursor-pointer text-black p-2 neo-brutal-button"
                 >
-                  <i class="fas fa-trash-alt text-lg"></i>
+                  <i class="fas fa-trash-alt text-white text-lg"></i>
                 </button>
               </div>
             </td>
@@ -68,23 +77,25 @@
             </td>
             <td class="py-3 px-4 sm:px-6 text-left">
               <span
-                class="bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-semibold"
+                class="bg-green-500 text-white py-1 px-3 text-xs font-black neo-brutal-border whitespace-nowrap"
                 >Aktif</span
               >
             </td>
             <td class="py-3 px-4 sm:px-6 text-center">
               <div class="flex items-center justify-center space-x-2">
                 <button
+                  onclick="openEditModal('0023456789')"
                   title="Edit Pengguna"
-                  class="text-blue-500 hover:text-blue-700 transition duration-200 p-1 rounded hover:bg-blue-100"
+                  class="bg-blue-400 hover:bg-blue-600 cursor-pointer text-black p-2 neo-brutal-button"
                 >
-                  <i class="fas fa-edit text-lg"></i>
+                  <i class="fas fa-edit text-lg text-white"></i>
                 </button>
                 <button
+                  onclick="openDeleteModal('0023456789')"
                   title="Hapus Pengguna"
-                  class="text-red-500 hover:text-red-700 transition duration-200 p-1 rounded hover:bg-red-100"
+                  class="bg-red-600 hover:bg-red-700 cursor-pointer text-black p-2 neo-brutal-button"
                 >
-                  <i class="fas fa-trash-alt text-lg"></i>
+                  <i class="fas fa-trash-alt text-white text-lg"></i>
                 </button>
               </div>
             </td>
@@ -97,23 +108,25 @@
             </td>
             <td class="py-3 px-4 sm:px-6 text-left">
               <span
-                class="whitespace-nowrap bg-red-100 text-red-700 py-1 px-3 rounded-full text-xs font-semibold"
+                class="bg-red-600 text-white py-1 px-3 text-xs font-black neo-brutal-border whitespace-nowrap"
                 >Tidak Aktif</span
               >
             </td>
             <td class="py-3 px-4 sm:px-6 text-center">
               <div class="flex items-center justify-center space-x-2">
                 <button
+                  onclick="openEditModal('0034567890')"
                   title="Edit Pengguna"
-                  class="text-blue-500 hover:text-blue-700 transition duration-200 p-1 rounded hover:bg-blue-100"
+                  class="bg-blue-400 hover:bg-blue-600 cursor-pointer text-black p-2 neo-brutal-button"
                 >
-                  <i class="fas fa-edit text-lg"></i>
+                  <i class="fas fa-edit text-lg text-white"></i>
                 </button>
                 <button
+                  onclick="openDeleteModal('0034567890')"
                   title="Hapus Pengguna"
-                  class="text-red-500 hover:text-red-700 transition duration-200 p-1 rounded hover:bg-red-100"
+                  class="bg-red-600 hover:bg-red-700 cursor-pointer text-black p-2 neo-brutal-button"
                 >
-                  <i class="fas fa-trash-alt text-lg"></i>
+                  <i class="fas fa-trash-alt text-white text-lg"></i>
                 </button>
               </div>
             </td>
@@ -126,29 +139,168 @@
             </td>
             <td class="py-3 px-4 sm:px-6 text-left">
               <span
-                class="bg-orange-100 text-orange-700 py-1 px-3 rounded-full text-xs font-semibold"
+                class="bg-amber-400 text-white py-1 px-3 text-xs font-black neo-brutal-border whitespace-nowrap"
                 >Tertunda</span
               >
             </td>
             <td class="py-3 px-4 sm:px-6 text-center">
               <div class="flex items-center justify-center space-x-2">
                 <button
+                  onclick="openEditModal('0045678901')"
                   title="Edit Pengguna"
-                  class="text-blue-500 hover:text-blue-700 transition duration-200 p-1 rounded hover:bg-blue-100"
+                  class="bg-blue-400 hover:bg-blue-600 cursor-pointer text-black p-2 neo-brutal-button"
                 >
-                  <i class="fas fa-edit text-lg"></i>
+                  <i class="fas fa-edit text-lg text-white"></i>
                 </button>
                 <button
+                  onclick="openDeleteModal('0045678901')"
                   title="Hapus Pengguna"
-                  class="text-red-500 hover:text-red-700 transition duration-200 p-1 rounded hover:bg-red-100"
+                  class="bg-red-600 hover:bg-red-700 cursor-pointer text-black p-2 neo-brutal-button"
                 >
-                  <i class="fas fa-trash-alt text-lg"></i>
+                  <i class="fas fa-trash-alt text-white text-lg"></i>
                 </button>
               </div>
             </td>
           </tr>
           </tbody>
       </table>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div id="editModal" class="fixed inset-0 bg-[rgba(0,0,0,0.8)] z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white neo-brutal-border p-6 sm:p-8 w-full max-w-md">
+        <div class="flex justify-between items-center border-b-4 border-black pb-4 mb-6">
+          <h3 class="text-2xl font-black text-black">Edit Pengguna</h3>          
+        </div>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-black font-bold mb-2">NISN</label>
+            <input
+              type="text"
+              class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600]"
+            />
+          </div>
+          <div>
+            <label class="block text-black font-bold mb-2">Nama</label>
+            <input
+              type="text"
+              class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600]"
+            />
+          </div>
+          <div>
+            <label class="block text-black font-bold mb-2">Status</label>
+            <select
+              class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600] cursor-pointer"
+            >
+              <option value="aktif">Aktif</option>
+              <option value="tidak_aktif">Tidak Aktif</option>
+              <option value="tertunda">Tertunda</option>
+            </select>
+          </div>
+          <div class="flex space-x-4 mt-6">
+            <button
+              type="submit"
+              class="bg-blue-400 hover:bg-blue-600 hover:bg-blue-500 cursor-pointer text-white px-6 py-3 neo-brutal-button font-bold flex-1"
+            >
+              SIMPAN
+            </button>
+            <button
+              type="button"
+              onclick="closeEditModal()"
+              class="bg-red-500 hover:bg-red-600 hover:bg-red-600 text-white px-6 py-3 neo-brutal-button font-bold flex-1 cursor-pointer"
+            >
+              BATAL
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Modal -->
+  <div id="deleteModal" class="fixed inset-0 bg-[rgba(0,0,0,0.8)] z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white neo-brutal-border p-6 sm:p-8 w-full max-w-md">
+        <div class="flex justify-between items-center border-b-4 border-black pb-4 mb-6">
+          <h3 class="text-2xl font-black text-black">Hapus Pengguna</h3>          
+        </div>
+        <p class="text-black font-bold mb-6">
+          Apakah Anda yakin ingin menghapus pengguna ini?
+        </p>
+        <div class="flex space-x-4">
+          <button
+            onclick="deleteUser()"
+            class="bg-red-600 hover:bg-red-700 hover:bg-red-700 cursor-pointer text-white px-6 py-3 neo-brutal-button font-bold flex-1"
+          >
+            HAPUS
+          </button>
+          <button
+            onclick="closeDeleteModal()"
+            class="bg-slate-500 hover:bg-slate-700 text-white px-6 py-3 neo-brutal-button font-bold flex-1 cursor-pointer"
+          >
+            BATAL
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add User Modal -->
+  <div id="addUserModal" class="fixed inset-0 bg-[rgba(0,0,0,0.8)] z-50 hidden overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white neo-brutal-border p-6 sm:p-8 w-full max-w-md my-8">
+        <div class="flex justify-between items-center border-b-4 border-black pb-4 mb-6 ">
+          <h3 class="text-2xl font-black text-black">Tambah Pengguna</h3>
+          <button onclick="closeAddUserModal()" class="text-2xl font-black hover:text-gray-700 hover:bg-red-500 hover:text-white p-2 cursor-pointer">×</button>
+        </div>
+        
+        <form class="space-y-4">
+          <div>
+            <label class="block text-black font-bold mb-2">NISN</label>
+            <input 
+              type="text" 
+              class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600]"
+              placeholder="Masukkan NISN"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-black font-bold mb-2">Nama Lengkap</label>
+            <input 
+              type="text" 
+              class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600]"
+              placeholder="Masukkan nama lengkap"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-black font-bold mb-2">Status</label>
+            <select 
+              class="w-full p-3 neo-brutal-border focus:outline-none focus:ring-4 focus:ring-[#FFE600] cursor-pointer"
+              required
+            >
+              <option value="">Pilih status</option>
+              <option value="aktif">Aktif</option>
+              <option value="tidak_aktif">Tidak Aktif</option>
+              <option value="tertunda">Tertunda</option>
+            </select>
+          </div>
+          <div class="flex space-x-4 mt-6">
+            <button type="submit" class="bg-yellow-300 hover:bg-yellow-400 cursor-pointer text-black px-6 py-3 neo-brutal-button font-bold flex-1">
+              SIMPAN
+            </button>
+            <button 
+              type="button" 
+              onclick="closeAddUserModal()" 
+              class="bg-red-500 hover:bg-red-600 cursor-pointer text-white px-6 py-3 neo-brutal-button font-bold flex-1"
+            >
+              BATAL
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
